@@ -33,7 +33,7 @@ const generatedConfig = computed(() => {
   // Replace placeholders
   return v2rayTemplate.value
     .replace(/"%%HOST%%"/g, `"${server.host}"`) // With quotes for string replacement
-    .replace(/%%PORT%%/g, server.port)       // Without quotes for number replacement
+    .replace(/"%%PORT%%"/g, server.port)       // Without quotes for number replacement
 })
 
 function copyToClipboard() {
