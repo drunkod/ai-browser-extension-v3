@@ -1,8 +1,8 @@
 // src/stores/v2ray.store.ts
 import { defineStore } from 'pinia'
-import { useBrowserLocalStorage } from '~/composables/useBrowserStorage'
-import type { V2RayServer } from '~/types/v2ray.types'
-import { STORAGE_KEYS } from '~/utils/constants' // <-- 1. IMPORT THE CONSTANTS & Corrected Path
+import { useBrowserLocalStorage } from '@/composables/useBrowserStorage'
+import type { V2RayServer } from '@/types/v2ray.types'
+import { STORAGE_KEYS } from '@/utils/constants' // <-- 1. IMPORT THE CONSTANTS & Corrected Path
 
 // A sensible default template to help the user get started.
 const defaultTemplate = JSON.stringify({

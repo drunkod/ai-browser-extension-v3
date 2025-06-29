@@ -22,6 +22,8 @@ export default {
   version_name: version,
   manifest_version: 3,
   // key: '',
+  //  content_security_policy: {
+  // extension_pages: "script-src 'self' 'wasm-unsafe-eval' 'sha256-tYCcUbFfjZ9QESuTWESGWrFg2SmiEdyD2MYUfRWUgK0='; object-src 'self';",  },  
   action: {
     default_popup: "src/ui/action-popup/index.html",
   },

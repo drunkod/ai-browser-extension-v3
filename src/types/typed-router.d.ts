@@ -30,6 +30,7 @@ declare module 'vue-router/auto-routes' {
     '/content-script-iframe/': RouteRecordInfo<'/content-script-iframe/', '/content-script-iframe', Record<never, never>, Record<never, never>>,
     '/devtools-panel/': RouteRecordInfo<'/devtools-panel/', '/devtools-panel', Record<never, never>, Record<never, never>>,
     '/options-page/': RouteRecordInfo<'/options-page/', '/options-page', Record<never, never>, Record<never, never>>,
+    '/options-page/v2ray-template': RouteRecordInfo<'/options-page/v2ray-template', '/options-page/v2ray-template', Record<never, never>, Record<never, never>>,
     '/setup/install': RouteRecordInfo<'/setup/install', '/setup/install', Record<never, never>, Record<never, never>>,
     '/setup/update': RouteRecordInfo<'/setup/update', '/setup/update', Record<never, never>, Record<never, never>>,
     '/side-panel/': RouteRecordInfo<'/side-panel/', '/side-panel', Record<never, never>, Record<never, never>>,

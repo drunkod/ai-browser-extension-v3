@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useV2rayStore } from '~/stores/v2ray.store.ts' // Added .ts extension
 import { ref, computed, watch } from 'vue' // <-- Add watch to the import
+import { useV2rayStore } from '@/stores/v2ray.store.ts' // Added .ts extension and fixed path
 
 const v2rayStore = useV2rayStore()
 const { serverList, v2rayTemplate } = storeToRefs(v2rayStore)
 
 const selectedServerIndex = ref(0)
 const copyButtonText = ref('Copy Config')
-
+ 
 // V-- THE BOT'S SUGGESTED IMPROVEMENT --V
 // Watch for changes in the server list to prevent out-of-bounds errors.
 watch(serverList, (newList) => {
@@ -33,7 +33,7 @@ const generatedConfig = computed(() => {
   // Replace placeholders
   return v2rayTemplate.value
     .replace(/"%%HOST%%"/g, `"${server.host}"`) // With quotes for string replacement
-    .replace(/%%PORT%%/g, server.port)       // Without quotes for number replacement
+    .replace(/%%PORT%%/g, `"${server.port}"`)  // Without quotes for number replacement
 })
 
 function copyToClipboard() {

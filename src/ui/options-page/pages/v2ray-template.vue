@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useV2rayStore } from '~/stores/v2ray.store.ts' // Added .ts extension
+import { useV2rayStore } from '@/stores/v2ray.store.ts' // Added .ts extension
 import { ref } from 'vue' // Added import for ref
 
 const v2rayStore = useV2rayStore()
