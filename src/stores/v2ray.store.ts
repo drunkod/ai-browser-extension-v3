@@ -22,7 +22,7 @@ const defaultTemplate = JSON.stringify({
         "servers": [
           {
             "address": "%%HOST%%",
-            "port": %%PORT%%
+            "port": "%%PORT%%"
           }
         ]
       },
