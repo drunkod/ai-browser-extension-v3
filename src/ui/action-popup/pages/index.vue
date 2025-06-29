@@ -1,13 +1,24 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useV2rayStore } from '~/stores/v2ray.store' // Corrected import path
-import { ref, computed } from 'vue' // Added computed
+import { ref, computed, watch } from 'vue' // <-- Add watch to the import
 
 const v2rayStore = useV2rayStore()
 const { serverList, v2rayTemplate } = storeToRefs(v2rayStore)
 
 const selectedServerIndex = ref(0)
 const copyButtonText = ref('Copy Config')
+
+// V-- THE BOT'S SUGGESTED IMPROVEMENT --V
+// Watch for changes in the server list to prevent out-of-bounds errors.
+watch(serverList, (newList) => {
+  if (newList && selectedServerIndex.value >= newList.length) {
+    // If the new list is shorter and the current index is now invalid,
+    // reset the selection to the first server.
+    selectedServerIndex.value = 0;
+  }
+});
+// ^-- END OF IMPROVEMENT --^
 
 // A computed property that generates the final config reactively.
 const generatedConfig = computed(() => {
