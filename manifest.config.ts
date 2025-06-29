@@ -43,8 +43,18 @@ export default {
   devtools_page: "src/devtools/index.html",
   options_page: "src/ui/options-page/index.html",
   offline_enabled: true,
-  host_permissions: ["<all_urls>"],
-  permissions: ["storage", "tabs", "background", "sidePanel"],
+  host_permissions: [
+    // We need specific permission for the host we want to monitor
+    "http://188.166.142.39/*",
+  ],
+  permissions: [
+    "storage",
+    "tabs",
+    "background",
+    "sidePanel",
+    "webRequest", // <-- ADD THIS: Allows us to listen to network requests
+    "notifications", // <-- ADD THIS: To notify you when the list is updated
+  ],
   web_accessible_resources: [
     {
       resources: [
