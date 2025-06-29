@@ -12,7 +12,7 @@ const [major, minor, patch, label = "0"] = version
 
 export default {
   author: {
-    email: "mubaidr@gmail.com",
+    email: "example@gmail.com",
   },
   name: env.mode === "staging" ? `[INTERNAL] ${name}` : displayName || name,
   description,
@@ -22,6 +22,8 @@ export default {
   version_name: version,
   manifest_version: 3,
   // key: '',
+  //  content_security_policy: {
+  // extension_pages: "script-src 'self' 'wasm-unsafe-eval' 'sha256-tYCcUbFfjZ9QESuTWESGWrFg2SmiEdyD2MYUfRWUgK0='; object-src 'self';",  },  
   action: {
     default_popup: "src/ui/action-popup/index.html",
   },
