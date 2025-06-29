@@ -11,6 +11,15 @@ const { isDark, profile, others } = storeToRefs(optionsStore)
     <RouterLinkUp />
 
     <h1>Options</h1>
+    <!-- V-- ADD THIS BUTTON --V -->
+    <UButton
+      to="/options-page/v2ray-template"
+      icon="ph:code"
+      class="mb-4"
+    >
+      Edit V2Ray Template
+    </UButton>
+    <!-- ^-- END OF ADDED BUTTON --^ -->
     <p>
       You can configure various options related to this extension here. These
       options/ settings are peristent, available in all contexts, implemented
