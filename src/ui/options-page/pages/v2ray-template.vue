@@ -23,7 +23,7 @@ function saveTemplate() {
     <RouterLinkUp />
     <h1 class="text-2xl font-bold mb-2">V2Ray Config Template</h1>
     <p class="mb-4 text-gray-500 dark:text-gray-400">
-      Paste your V2Ray config below. Use the placeholders <code>%%HOST%%</code> and <code>%%PORT%%</code>
+      Paste your V2Ray config below. Use the placeholders <code>`%%HOST%%`</code> and <code>`%%PORT%%`</code>
       where the server address and port should go. The template will be saved automatically as you type.
     </p>
 
